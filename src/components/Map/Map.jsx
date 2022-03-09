@@ -7,7 +7,7 @@ import styles from '../Map/styles.module.css'
 
 const Map = () => {
     // const isMobile = useMediaQuey('(min-width:600px')
-    const coordinates = { lat: 0, lng: 0}
+    const coordinates = { lat:41.40338, lng: 2.17403}
 
     return (
         <div className={styles.mapContainer}>
