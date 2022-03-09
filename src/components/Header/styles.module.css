@@ -1,0 +1,26 @@
+.toolbar {
+    background-color: darkslateblue;
+}
+
+.searchBox {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.title {
+    font-size: larger;
+}
+
+.searchDiv {
+    display: flex;
+    align-items: center;
+    background-color: #7159c1;
+    margin-left: 10px;
+}
+
+.searchDiv:hover {
+    background-color: #7862c0;
+    transition-duration: 200ms;
+}
