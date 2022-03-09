@@ -5,12 +5,9 @@ import styles from '../List/styles.module.css'
 import PlaceDetails from '../PlaceDetails/PlaceDetails'
 
 const List = () => {
-    const [type, setType] = useState('restaurants');
+    const [type, setType] = useState('');
     const [rating, setRating] = useState('');
     const places = [
-        { name: 'Cool place'},
-        { name: 'Best Beer' },
-        { name: 'Best Steak' },
         { name: 'Cool place'},
         { name: 'Best Beer' },
         { name: 'Best Steak' },
@@ -21,18 +18,18 @@ const List = () => {
 
     return (
         <div className={styles.container}>
-            <Typography variant="h4">
+            <Typography variant="h5" >
                 Restaurants, Hotels & Attractions around you
             </Typography>
-            <FormControl>
-                <InputLabel>Type</InputLabel>
+            <FormControl className={styles.form}>
+                <InputLabel className={styles.input}>Type</InputLabel>
                 <Select value={type} onChange={(e) => setType(e.target.value)}>
                     <MenuItem value="restaurants">Restaurants</MenuItem>
                     <MenuItem value="hotels">Hotels</MenuItem>
                     <MenuItem value="attractions">Attractions</MenuItem>
                 </Select>
             </FormControl>
-            <FormControl>
+            <FormControl className={styles.form}>
                 <InputLabel>Rating</InputLabel>
                 <Select value={rating} onChange={(e) => setRating(e.target.value)}>
                     <MenuItem value={0}>All</MenuItem>

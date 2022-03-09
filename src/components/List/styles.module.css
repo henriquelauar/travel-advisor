@@ -1,0 +1,12 @@
+.container {
+    margin-top: 5%;
+}
+
+.form {
+    width: 30%;
+    border: none;
+}
+
+.list {
+    height: max-content;
+}
