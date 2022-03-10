@@ -34,6 +34,7 @@ const List = () => {
         <FormControl className={styles.formControl}>
           <InputLabel className={styles.input}>Type</InputLabel>
           <Select value={type} onChange={(e) => setType(e.target.value)}>
+            <MenuItem value="restaurants hotels and attractions">All</MenuItem>
             <MenuItem value="restaurants">Restaurants</MenuItem>
             <MenuItem value="hotels">Hotels</MenuItem>
             <MenuItem value="attractions">Attractions</MenuItem>
@@ -50,13 +51,13 @@ const List = () => {
         </FormControl>
       </div>
       <div className={styles.places}>
-      <Grid container spacing={3} className={styles.list}>
-        {places?.map((place, i) => (
-          <Grid item key={i} xs={12}>
-            <PlaceDetails place={place} />
-          </Grid>
-        ))}
-      </Grid>
+        <Grid container spacing={3} className={styles.list}>
+          {places?.map((place, i) => (
+            <Grid item key={i} xs={12}>
+              <PlaceDetails place={place} />
+            </Grid>
+          ))}
+        </Grid>
       </div>
     </div>
   );
