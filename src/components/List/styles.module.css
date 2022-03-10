@@ -2,11 +2,23 @@
     margin-top: 5%;
 }
 
-.form {
-    width: 30%;
-    border: none;
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.list {
-    height: max-content;
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.formControl {
+    width: 40%
+}
+
+.places {
+    width: 90%;
+    margin-left: 7%;
 }
