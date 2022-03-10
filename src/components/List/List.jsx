@@ -1,29 +1,12 @@
 import React from "react";
-import {
-  CircularProgress,
-  Grid,
-  Typography,
-  InputLabel,
-  MenuItem,
-  FormControl,
-  Select,
-  Input,
-} from "@mui/material";
+import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select, Input } from "@mui/material";
 import { useState } from "react";
 import styles from "../List/styles.module.css";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
-const List = () => {
+const List = ({ places }) => {
   const [type, setType] = useState("");
   const [rating, setRating] = useState("");
-  const places = [
-    { name: "Cool place" },
-    { name: "Best Beer" },
-    { name: "Best Steak" },
-    { name: "Cool place" },
-    { name: "Best Beer" },
-    { name: "Best Steak" },
-  ];
 
   return (
     <div className={styles.container}>
@@ -39,7 +22,7 @@ const List = () => {
             <MenuItem value="hotels">Hotels</MenuItem>
             <MenuItem value="attractions">Attractions</MenuItem>
           </Select>
-        </FormControl>
+        </FormControl>       
         <FormControl className={styles.formControl}>
           <InputLabel>Rating</InputLabel>
           <Select value={rating} onChange={(e) => setRating(e.target.value)}>

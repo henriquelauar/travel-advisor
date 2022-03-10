@@ -1,5 +1,7 @@
 .container {
     margin-top: 5%;
+    max-height: 90vh;
+    overflow-y: scroll;
 }
 
 .title {
@@ -12,6 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 5%;
 }
 
 .formControl {
@@ -21,4 +24,13 @@
 .places {
     width: 90%;
     margin-left: 7%;
+    margin-top: 5%;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+   }
+     
+   ::-webkit-scrollbar-thumb {
+    background: darkslateblue;
+   }
