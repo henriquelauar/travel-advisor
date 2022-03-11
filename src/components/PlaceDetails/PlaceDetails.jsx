@@ -14,7 +14,9 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import styles from "../PlaceDetails/styles.module.css";
 import { Rating } from "@mui/material";
 
-const PlaceDetails = ({ place }) => {
+const PlaceDetails = ({ place, selected, refProp }) => {
+  if(selected) refProp?.current?.scrollIntoView({ behavior: "smooth", block: "start"})
+
   return (
     <Card elevation={6}>
       <CardMedia

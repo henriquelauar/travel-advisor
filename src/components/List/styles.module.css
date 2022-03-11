@@ -31,6 +31,6 @@
     width: 8px;
    }
      
-   ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: darkslateblue;
    }
