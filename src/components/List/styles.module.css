@@ -1,36 +1,25 @@
 .container {
-    margin-top: 5%;
-    max-height: 90vh;
-    overflow-y: scroll;
+    padding: 25px;
 }
 
 .title {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 
-.form {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 5%;
+.loading {
+    display: grid;
+    place-content: center;
+    margin-top: 50%;
 }
 
 .formControl {
-    width: 40%
+    margin-bottom: 10%;
 }
 
-.places {
-    width: 90%;
-    margin-left: 7%;
-    margin-top: 5%;
+.list {
+    height: 77vh;
+    overflow: auto;
+    padding: 5px;
 }
-
-::-webkit-scrollbar {
-    width: 8px;
-   }
-     
-::-webkit-scrollbar-thumb {
-    background: darkslateblue;
-   }
