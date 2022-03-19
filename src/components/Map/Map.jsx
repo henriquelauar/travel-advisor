@@ -4,7 +4,7 @@ import { Paper, Typography, useMediaQuery } from '@mui/material'
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined'
 import Rating from '@mui/material/Rating';
 import styles from "../Map/styles.module.css";
-// import mapStyles from '../../mapStyles';
+import mapStyles from './mapStyles';
 
 const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }) => {
   const isDesktop = useMediaQuery('(min-width: 600px')
@@ -12,12 +12,12 @@ const Map = ({ setCoordinates, setBounds, coordinates, places, setChildClicked }
   return (
     <div className={styles.mapContainer}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyDxYxAMv3rHRAoDkJPU_VWlgua218acOgE" }}
+        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS__API_KEY }}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={14}
         margin={[50, 50, 50, 50]}
-        // options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
+        options={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
         onChange={(e) => {
             setCoordinates({ lat: e.center.lat, lng: e.center.lng})
             setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw})
